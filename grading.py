@@ -10,7 +10,7 @@ sub5 = 88
 total = sub1 + sub2 + sub3 + sub4 + sub5
 percentage = total / 5
 
-print ("Total   :",total)
+print ("Total   :",total, "/500")
 print ("Percentage :", percentage, "%")
 
 if  percentage >= 90 and percentage <= 100 :
@@ -27,6 +27,7 @@ elif percentage < 50 :
     print ("Grade : F")
 else :
     print ("Invalid marks..")
+
 
 
 
