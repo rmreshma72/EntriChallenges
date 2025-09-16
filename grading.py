@@ -1,23 +1,32 @@
 
 #Assignmet 1 - Grading using conditional and logical operators
 
-grade = 65
+sub1 = 78
+sub2 = 85
+sub3 = 92
+sub4 = 74 
+sub5 = 88 
 
-if grade > 90 and grade <= 100 :
+total = sub1 + sub2 + sub3 + sub4 + sub5
+percentage = total / 5
+
+print ("Total   :",total)
+print ("Percentage :", percentage, "%")
+
+if  percentage >= 90 and percentage <= 100 :
     print ("Grade : A+")
-elif grade > 80 and grade <= 90 :
+elif percentage >= 80 and percentage < 90 :
     print ("Grade : A")
-elif grade > 70 and grade <= 80 :
-    print ("Grade : B+")
-elif grade > 60 and grade <= 70:
+elif percentage >= 70 and percentage < 80 :
     print ("Grade : B")
-elif grade > 50 and grade <= 60 :
-    print ("Grade : C+")
-elif grade > 40 and grade <= 50 :
+elif percentage >= 60 and percentage < 70:
     print ("Grade : C")
-elif grade <= 40 :
-    print ("Grade : Fail")
+elif percentage >= 50 and percentage < 60 :
+    print ("Grade : D")
+elif percentage < 50 :
+    print ("Grade : F")
 else :
     print ("Invalid marks..")
+
 
 
