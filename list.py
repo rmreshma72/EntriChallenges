@@ -6,15 +6,15 @@ even=[]
 odd=[]
 multi=[]
 for i in range(1,101):
-    num.append(i)
+    num.append(i)        #Numbers from 1-100 
 print("Numbers are: ",num)
 for i in num:
     if(i%2==0):
-        even.append(i)
+        even.append(i)    #Even Numbers
     else:
-        odd.append(i)
+        odd.append(i)    #Odd numbers
     if(i%3==0 and i%5==0):
-        multi.append(i)
+        multi.append(i)    #Numbers Divisible by 3 and 5
 
 print("Even numbers are:",even)
 print("Odd numbers are:",odd)
