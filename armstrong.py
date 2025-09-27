@@ -1,3 +1,5 @@
+#Checking a number is Armstrong or not
+
 def armstrong(num):
     result=0
     l = len(str(num))
@@ -11,4 +13,5 @@ num=int(input("Enter a number:"))
 if (armstrong(num)==num):
     print(num, "is an Armstrong number")
 else:
+
     print(num,"is not an Armstrong number")
