@@ -8,7 +8,7 @@ rom=['I','V','X','L','C','D','M']
 try:
     for ch in s:
         if ch not in rom:
-            raise ValueError(f"Character '{ch}' not a Roman number !")  # trigger exception
+            raise ValueError()
 except ValueError as e:
     sys.exit("Exiting the program because an invalid Roman number was found.")
 
@@ -78,4 +78,5 @@ for th in range(len(s)-1,-1,-1):    #Converting Thousands place
 
 
 print ("INTEGER:",n)   
+
 
