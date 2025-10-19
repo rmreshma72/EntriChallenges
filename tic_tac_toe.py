@@ -1,5 +1,5 @@
 import random
-
+# Displaying the boared
 def board(a1,a2,a3,b1,b2,b3,c1,c2,c3):
     print()
     print(f" {a1} | {a2} | {a3} ")
@@ -8,15 +8,15 @@ def board(a1,a2,a3,b1,b2,b3,c1,c2,c3):
     print("---+---+---")
     print(f" {c1} | {c2} | {c3} ")
     print()
-
-def winner(a1,a2,a3,b1,b2,b3,c1,c2,c3,move):
+#For finding the winner
+def winner(a1,a2,a3,b1,b2,b3,c1,c2,c3,move):    #Row
     if (a1==a2==a3==move) or (b1==b2==b3==move) or (c1==c2==c3==move):
         return True
 
-    if (a1==b1==c1==move) or (a2==b2==c2==move) or (a3==b3==c3==move):
+    if (a1==b1==c1==move) or (a2==b2==c2==move) or (a3==b3==c3==move):    #Column
         return True
     
-    if(a1==b2==c3==move) or (a3==b2==c1==move):
+    if(a1==b2==c3==move) or (a3==b2==c1==move):    #Diagonal
         return True
      
     else:
@@ -28,21 +28,21 @@ board(1,2,3,4,5,6,7,8,9)
 a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = ' '
 moves=[1,2,3,4,5,6,7,8,9]
 player=input('Enter your name:').capitalize()
-print(f'\n{player}: X  vs   Computer: O')
+print(f'\n{player}: X  vs   Computer: O') #Player will be X and Computer will be O
 count = 0
 
 while True:
     try:
         count+= 1
         if(count % 2 ==0):
-            ch=random.choice(moves)
+            ch=random.choice(moves)    #Choosing random number from the list 'moves'
             print(f'\nComputer Position 💻: {ch}')
             M='O'
         else:
             ch=int(input(f'\n{player} position 🧑:'))
             M='X'
 
-        if ch in moves:
+        if ch in moves:    #Positioning the moves in the board
             if ch == 1 and a1 == ' ':
                 a1 = M
             elif ch == 2 and a2 == ' ':
@@ -66,7 +66,7 @@ while True:
                 continue
       
         index=moves.index(ch)
-        moves.pop(index)
+        moves.pop(index)    
         board(a1,a2,a3,b1,b2,b3,c1,c2,c3)
         win=winner(a1,a2,a3,b1,b2,b3,c1,c2,c3,M)
         if(win):
@@ -79,7 +79,7 @@ while True:
     except ValueError:
         print('\nInvalid Position ❌.. Try again...\n')
         count-=1
-    except IndexError:
+    except IndexError:    #If the list moves is empty it is tie
         print('Its a tie 😎😎...')
 
 
@@ -87,4 +87,5 @@ while True:
 
 
         
+
 
