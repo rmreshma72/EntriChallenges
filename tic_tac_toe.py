@@ -1,3 +1,5 @@
+#Basic Tic-Tac-Toe game
+
 import random
 # Displaying the boared
 def board(a1,a2,a3,b1,b2,b3,c1,c2,c3):
@@ -8,6 +10,7 @@ def board(a1,a2,a3,b1,b2,b3,c1,c2,c3):
     print("---+---+---")
     print(f" {c1} | {c2} | {c3} ")
     print()
+    
 #For finding the winner
 def winner(a1,a2,a3,b1,b2,b3,c1,c2,c3,move):    #Row
     if (a1==a2==a3==move) or (b1==b2==b3==move) or (c1==c2==c3==move):
@@ -24,11 +27,11 @@ def winner(a1,a2,a3,b1,b2,b3,c1,c2,c3,move):    #Row
     
 #main
 print('\n\nWelcome to tic-tactoe game   X - O - X\n')
-board(1,2,3,4,5,6,7,8,9)
+board(1,2,3,4,5,6,7,8,9)    #Displaying the board with position number
 a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = ' '
-moves=[1,2,3,4,5,6,7,8,9]
+moves=[1,2,3,4,5,6,7,8,9]        #Positions in the board
 player=input('Enter your name:').capitalize()
-print(f'\n{player}: X  vs   Computer: O') #Player will be X and Computer will be O
+print(f'\n{player}: X  vs   Computer: O') #Player will be 'X' and Computer will be 'O'
 count = 0
 
 while True:
@@ -76,10 +79,10 @@ while True:
                 print('Computer 💻 wins.. 🙁🙁')
             break
             
-    except ValueError:
+    except ValueError:    #If the position is already occupied or choosing an invalid position
         print('\nInvalid Position ❌.. Try again...\n')
         count-=1
-    except IndexError:    #If the list moves is empty it is tie
+    except IndexError:    #If the list 'moves' is empty, it is tie
         print('Its a tie 😎😎...')
 
 
@@ -87,5 +90,6 @@ while True:
 
 
         
+
 
 
