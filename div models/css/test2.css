@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3px;
+}
+
+.design{
+    border: 1px solid black;
+    background-color: rgb(43, 235, 43);  
+}
+.header{
+    height: 50px;
+}
+.mid{
+    height: 200px;
+    display: flex;
+    gap: 3px;
+}
+
+.side{
+    width: 20%;
+    
+}
+.right{
+    width: 80% ;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.content1{
+    height: 50%;
+    
+}
+.down{
+    display: flex;
+    height: 50%;
+    gap: 3px;
+}
+
+.content{
+    width: 50%;
+    
+}
+
+.footer{
+   height: 50px;
+    
+}
